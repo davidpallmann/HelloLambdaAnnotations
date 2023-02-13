@@ -26,10 +26,9 @@ namespace HelloLambdaAnnotations
         /// <returns>number of days between from and to.</returns>
         [LambdaFunction()]
         [HttpApi(LambdaHttpMethod.Get, "/datediff/{from}/{to}")]
-        public int DateDifferenceInDays(string from, string to, ILambdaContext context)
+        public int DateDifferenceInDays(string from, string to)
         {
             int days = Convert.ToInt16((DateTime.Parse(to) - DateTime.Parse(from)).TotalDays);
-            context.Logger.LogInformation($"datediff {from} {to} is {days}");
             return days;
         }
 
@@ -41,7 +40,7 @@ namespace HelloLambdaAnnotations
         /// <returns>resulting date</returns>
         [LambdaFunction()]
         [HttpApi(LambdaHttpMethod.Get, "/dateadd/{date}/{days}")]
-        public string DateAdd(string date, int days, ILambdaContext context)
+        public string DateAdd(string date, int days)
         {
             return (DateTime.Parse(date).AddDays(days)).ToShortDateString();
         }
