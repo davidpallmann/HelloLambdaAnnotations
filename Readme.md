@@ -1,3 +1,5 @@
+This is the code project for the [Hello, Lambda Annotations!](https://davidpallmann.hashnode.dev/hello-net-lambda-annotations) blog post.
+
 # Hello, Lambda Annotations!
 
 This episode: .NET Lambda Annotations Framework and simplified coding of HTTP endpoints. In this Hello, Cloud blog series, we're covering the basics of AWS cloud services for newcomers who are .NET developers. If you love C# but are new to AWS, or to this particular service, this should give you a jumpstart.
